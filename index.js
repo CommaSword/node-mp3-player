@@ -68,4 +68,4 @@ function createAudio () {
   }
 }
 
-module.exports = createAudio
+module.exports = { createAudio }
