@@ -1,0 +1,14 @@
+patch-package
+new file mode 100644
+Binary files /dev/null and b/node_modules/electron-spawn/.cli.js.swp differ
+--- a/node_modules/electron-spawn/cli.js
++++ b/node_modules/electron-spawn/cli.js
+@@ -4,6 +4,8 @@ var electron = require('electron')
+ var path = require('path')
+ 
+ electron.app.on('ready', function () {
++  const { dialog } = require('electron')
++  dialog.showErrorBox = () => {}
+   var win = new electron.BrowserWindow({show: false})
+   win.loadURL('file://' + path.join(__dirname, 'index.html'))
+   win.webContents.on('did-finish-load', function () {
