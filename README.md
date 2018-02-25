@@ -7,7 +7,7 @@
 Use the browser Audio api to play mp3 files in node.
 Browser api brought to you by electron (specifically `electron-spawn`)
 The motivation being this should be more cross-platform friendly.
-API is still early stages and supposed the basic stuff, we're open to new functionality being requested and/or contributed.
+API is still early stages and supports the basic stuff, we're open to new functionality being requested and/or contributed.
 
 
 ## usage
