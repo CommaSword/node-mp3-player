@@ -21,7 +21,7 @@ test('Can instantiate mp3 file', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -42,7 +42,7 @@ test('Can change volume on the fly', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -64,7 +64,7 @@ test('Can get volume', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -87,7 +87,7 @@ test('Can get loop', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -110,7 +110,7 @@ test('Can play audio', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -132,7 +132,7 @@ test('Can loop audio', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -154,7 +154,7 @@ test('Can unloop audio', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -176,7 +176,7 @@ test('Can stop audio', async t => {
       stderr: PassThrough({objectMode: true}),
       stdout: PassThrough({objectMode: true})
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -206,7 +206,7 @@ test('ERROR - play command times out properly', async t => {
         callback(null, data)
       }
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -240,7 +240,7 @@ test('ERROR - loop command times out properly', async t => {
         callback(null, data)
       }
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
@@ -274,7 +274,7 @@ test('ERROR - volume command times out properly', async t => {
         callback(null, data)
       }
     }
-    const createAudio = mockAudioConstructor(electronSpawn)
+    const { createAudio } = mockAudioConstructor(electronSpawn)
     mockElectronApp(electronSpawn, AudioSpy)()
     const Audio = await createAudio()
     const aud = await Audio(`${__dirname}/fixtures/foo.mp3`)
