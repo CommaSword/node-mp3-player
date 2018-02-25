@@ -11,12 +11,10 @@ function initElectron (pending) {
     Object.keys(data).forEach(command => {
       const params = data[command]
       const { val, commandId } = params
-      if (pending[commandId]) {
-        const { resolve, rejectTimeout } = pending[commandId]
-        resolve(val)
-        clearTimeout(rejectTimeout)
-        delete pending[commandId]
-      }
+      const { resolve, rejectTimeout } = pending[commandId]
+      resolve(val)
+      clearTimeout(rejectTimeout)
+      delete pending[commandId]
     })
   })
   electron.stdout.pipe(objects)
