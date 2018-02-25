@@ -6,7 +6,8 @@
   "scripts": {
     "prepare": "patch-package",
     "test": "standard && tape ./test/*.spec.js | tap-spec",
-    "coverage": "nyc --reporter lcov tape ./test/*.spec.js | tap-spec"
+    "coverage": "nyc --reporter lcov tape ./test/*.spec.js | tap-spec",
+    "coveralls": "nyc npm test && nyc report --reporter=text-lcov | coveralls"
   },
   "keywords": [
     "mp3",
@@ -23,6 +24,7 @@
     "uuid": "^3.2.1"
   },
   "devDependencies": {
+    "coveralls": "^3.0.0",
     "nyc": "^11.4.1",
     "patch-package": "^5.1.1",
     "proxyquire": "^1.8.0",
