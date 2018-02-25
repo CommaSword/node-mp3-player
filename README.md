@@ -25,11 +25,10 @@ const Audio = createAudio()
 
 (async () => {
   const myFile = await Audio(`${__dirname}/mp3/foo.mp3`)
-  await play() // set both files at 50% volume
-  await Audio.volume(0.5)
-  const currentVolume = await Audio.volume() // 0.5
-  await Audio.loop()
-  await Audio.stop()
+  await myFile.volume(0.5)
+  const currentVolume = await myFile.volume() // 0.5
+  await myFile.loop()
+  await myFile.stop()
 })()
 
 ```
