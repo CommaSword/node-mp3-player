@@ -1,4 +1,9 @@
 # node-play-mp3
+
+[![Coverage Status](https://coveralls.io/repos/github/CommaSword/node-play-mp3/badge.svg?branch=master)](https://coveralls.io/github/CommaSword/node-play-mp3?branch=master)
+[![Build Status](https://travis-ci.org/CommaSword/node-play-mp3.svg?branch=master)](https://travis-ci.org/CommaSword/node-play-mp3)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 Use the browser Audio api to play mp3 files in node.
 Browser api brought to you by electron (specifically `electron-spawn`)
 The motivation being this should be more cross-platform friendly.
