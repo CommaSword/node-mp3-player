@@ -1,7 +1,7 @@
-# node-play-mp3
+# node-mp3-player
 
-[![Coverage Status](https://coveralls.io/repos/github/CommaSword/node-play-mp3/badge.svg?branch=master)](https://coveralls.io/github/CommaSword/node-play-mp3?branch=master)
-[![Build Status](https://travis-ci.org/CommaSword/node-play-mp3.svg?branch=master)](https://travis-ci.org/CommaSword/node-play-mp3)
+[![Coverage Status](https://coveralls.io/repos/github/CommaSword/node-mp3-player/badge.svg?branch=master)](https://coveralls.io/github/CommaSword/node-mp3-player?branch=master)
+[![Build Status](https://travis-ci.org/CommaSword/node-mp3-player.svg?branch=master)](https://travis-ci.org/CommaSword/node-mp3-player)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 Use the browser Audio api to play mp3 files in node.
@@ -20,7 +20,7 @@ Calling it multiple times will instantiate multiple `electron` processes. This i
 You probably want to create multiple files using the Audio pseudo constructor. Though if multiple electron instances is your thing, knock your socks off.
 
 ```javascript
-const { createAudio } = require('node-play-mp3')
+const { createAudio } = require('node-mp3-player')
 const Audio = createAudio()
 
 (async () => {
