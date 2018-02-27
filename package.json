@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CommaSword/node-play-mp3.git"
+    "url": "git+https://github.com/CommaSword/node-mp3-player.git"
   },
   "dependencies": {
     "JSONStream": "^1.3.2",
