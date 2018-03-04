@@ -21,7 +21,7 @@ You probably want to create multiple files using the Audio pseudo constructor. T
 
 ```javascript
 const { createAudio } = require('node-mp3-player')
-const Audio = createAudio()
+const Audio = createAudio();
 
 (async () => {
   const myFile = await Audio(`${__dirname}/mp3/foo.mp3`)
